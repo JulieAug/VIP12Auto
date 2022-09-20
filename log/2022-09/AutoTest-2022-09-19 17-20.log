@@ -1,0 +1,223 @@
+17:20:00  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第48行的内容是：[, , 用户名17位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=TesterTesterTeste&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:00  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第49行的内容是：[, , 用户名过长, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=TesterTesterTestTesterTesterTestTesterTesterTest&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:00  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第50行的内容是：[密码字段, , ,  , , , , , , , , ]
+17:20:00  [INFO ] : 第51行的内容是：[, 无密码, , , , , , , , , , ]
+17:20:00  [INFO ] : 第52行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:00  [INFO ] : 第53行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:00  [INFO ] : {"status":200,"msg":"success","token":"f2972729acb446d39e56f8babcd13604"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第54行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:00  [INFO ] : 解析$.token得到的结果是f2972729acb446d39e56f8babcd13604存储为token
+17:20:00  [INFO ] : 第55行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:00  [INFO ] : 第56行的内容是：[, , 无密码注册, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Testerp&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:00  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第57行的内容是：[, 密码为空, , , , , , , , , , ]
+17:20:00  [INFO ] : 第58行的内容是：[, , 密码为空注册, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Testerp&pwd=&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:00  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第59行的内容是：[, 密码特殊字符, , , , , , , , , , ]
+17:20:00  [INFO ] : 第60行的内容是：[, , 密码特殊字符, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester1&pwd=#￥%a&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:00  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:00  [ERROR] : 测试失败，实际值是402
+17:20:00  [INFO ] : 第61行的内容是：[, , 密码特殊字符, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester2&pwd=큐〓㊚a&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:00  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:00  [INFO ] : 测试成功
+17:20:00  [INFO ] : 第62行的内容是：[, , 密码emoji表情, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester3&pwd=Wil??l&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:01  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:01  [INFO ] : 测试成功
+17:20:01  [INFO ] : 第63行的内容是：[, , 尝试登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/login, username=Tester3&password=Wil??l, , jsonValueCheck, $.status, 401, , ]
+17:20:01  [INFO ] : {"status":200,"msg":"恭喜您，登录成功","userid":"1234570426"}
+17:20:01  [ERROR] : 测试失败，实际值是200
+17:20:01  [INFO ] : 第64行的内容是：[, , 注销登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, , , jsonValueCheck, $.status, 200, , ]
+17:20:01  [INFO ] : {"status":200,"msg":"用户已退出登录"}
+17:20:01  [INFO ] : 测试成功
+17:20:01  [INFO ] : 第65行的内容是：[, 密码边界值, , , , , , , , , , ]
+17:20:01  [INFO ] : 第66行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:01  [INFO ] : 第67行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:01  [INFO ] : {"status":200,"msg":"success","token":"bbb782183a9f4bbba303248d8d21dbb9"}
+17:20:01  [INFO ] : 测试成功
+17:20:01  [INFO ] : 第68行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:01  [INFO ] : 解析$.token得到的结果是bbb782183a9f4bbba303248d8d21dbb9存储为token
+17:20:01  [INFO ] : 第69行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:01  [INFO ] : 第70行的内容是：[, , 密码2位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester4&pwd=12&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:01  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:01  [INFO ] : 测试成功
+17:20:01  [INFO ] : 第71行的内容是：[, , 密码3位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester5&pwd=123&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:01  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:01  [INFO ] : 测试成功
+17:20:01  [INFO ] : 第72行的内容是：[, , 密码16位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester6&pwd=1234561234561234&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:02  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第73行的内容是：[, , 密码17位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester7&pwd=12345612345612345&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:02  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第74行的内容是：[, , 密码过长, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester8&pwd=123456123456123412345612345612341234561234561234&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:02  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第75行的内容是：[昵称字段, , ,  , , , , , , , , ]
+17:20:02  [INFO ] : 第76行的内容是：[, 无昵称, , , , , , , , , , ]
+17:20:02  [INFO ] : 第77行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:02  [INFO ] : 第78行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:02  [INFO ] : {"status":200,"msg":"success","token":"341eb1b6af954eb1bda43d2c2309a2a9"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第79行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:02  [INFO ] : 解析$.token得到的结果是341eb1b6af954eb1bda43d2c2309a2a9存储为token
+17:20:02  [INFO ] : 第80行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:02  [INFO ] : 第81行的内容是：[, , 无昵称注册, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester9&pwd=123456&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:02  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第82行的内容是：[, 昵称为空, , , , , , , , , , ]
+17:20:02  [INFO ] : 第83行的内容是：[, , 昵称为空注册, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester10&pwd=123456&nickname=&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:02  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第84行的内容是：[, 昵称特殊字符, , , , , , , , , , ]
+17:20:02  [INFO ] : 第85行的内容是：[, , 昵称特殊字符, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester11&pwd=123456&nickname=#￥%a&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:02  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:02  [ERROR] : 测试失败，实际值是402
+17:20:02  [INFO ] : 第86行的内容是：[, , 昵称特殊字符, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester12&pwd=123456&nickname=큐〓㊚a&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:02  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:02  [INFO ] : 测试成功
+17:20:02  [INFO ] : 第87行的内容是：[, , 昵称emoji表情, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester13&pwd=123456&nickname=Wil??l&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:03  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:03  [INFO ] : 测试成功
+17:20:03  [INFO ] : 第88行的内容是：[, , 尝试登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/login, username=Tester13&password=123456, , jsonValueCheck, $.status, 401, , ]
+17:20:03  [INFO ] : {"status":200,"msg":"恭喜您，登录成功","userid":"1234570430"}
+17:20:03  [ERROR] : 测试失败，实际值是200
+17:20:03  [INFO ] : 第89行的内容是：[, , 注销登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, , , jsonValueCheck, $.status, 200, , ]
+17:20:03  [INFO ] : {"status":200,"msg":"用户已退出登录"}
+17:20:03  [INFO ] : 测试成功
+17:20:03  [INFO ] : 第90行的内容是：[, 昵称边界值, , , , , , , , , , ]
+17:20:03  [INFO ] : 第91行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:03  [INFO ] : 第92行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:04  [INFO ] : {"status":200,"msg":"success","token":"15b8be1beaca42588f22b25ef546d62a"}
+17:20:04  [INFO ] : 测试成功
+17:20:04  [INFO ] : 第93行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:04  [INFO ] : 解析$.token得到的结果是15b8be1beaca42588f22b25ef546d62a存储为token
+17:20:04  [INFO ] : 第94行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:04  [INFO ] : 第95行的内容是：[, , 昵称2位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester14&pwd=123456&nickname=&describe=11这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:04  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:04  [INFO ] : 测试成功
+17:20:04  [INFO ] : 第96行的内容是：[, , 昵称3位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester15&pwd=123456&nickname=111&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:04  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:04  [INFO ] : 测试成功
+17:20:04  [INFO ] : 第97行的内容是：[, , 昵称36位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester16&pwd=123456&nickname=1111aaaabbbb1111aaaabbbb1111aaaabbbb&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 200, , ]
+17:20:05  [INFO ] : {"status":200,"msg":"注册成功"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第98行的内容是：[, , 昵称37位, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester17&pwd=123456&nickname=1111aaaabbbb1111aaaabbbb1111aaaabbbb1&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:05  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第99行的内容是：[, , 昵称过长, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/register, username=Tester18&pwd=123456&nickname=1111aaaabbbb1111aaaabbbb1111aaaabbbb1111aaaabbbb1111aaaabbbb1111aaaabbbb1111aaaabbbb&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 402, , ]
+17:20:05  [INFO ] : {"status":402,"msg":"参数错误"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 当前sheet页是注销接口开始遍历
+17:20:05  [INFO ] : 第0行的内容是：[分组信息, 类别, 用例名, 关键字, 参数1, 参数2, 参数3, 校验, jsonpath, 预期结果, 执行结果, 实际返回]
+17:20:05  [INFO ] : 第1行的内容是：[token校验, , ,  , , , , , , , , ]
+17:20:05  [INFO ] : 第2行的内容是：[, 无token, , , , , , , , , , ]
+17:20:05  [INFO ] : 第3行的内容是：[, , 清空头域, clearHeader, , , , , , , , ]
+17:20:05  [INFO ] : 第4行的内容是：[, , 无token注销, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, username=Tester&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.status, 405, , ]
+17:20:05  [INFO ] : {"status":405,"msg":"非法请求"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第5行的内容是：[, 空token, , , , , , , , , , ]
+17:20:05  [INFO ] : 第6行的内容是：[, , 添加空token, addHeader, {”token”:""}, , , , , , , ]
+17:20:05  [INFO ] : 第7行的内容是：[, , 空token注销, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, username=Tester&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.msg, 非法请求, , ]
+17:20:05  [INFO ] : {"status":405,"msg":"非法请求"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第8行的内容是：[, token过长, , , , , , , , , , ]
+17:20:05  [INFO ] : 第9行的内容是：[, , token过长, addHeader, {"token":"adsfklajfkalfkalfaklsdjfkadsljfklasdfjaldsfjklasdfjkdsajfklds"}, , , , , , , ]
+17:20:05  [INFO ] : 第10行的内容是：[, , token过长注销, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, username=Tester&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.msg, 非法请求, , ]
+17:20:05  [INFO ] : {"status":405,"msg":"非法请求"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第11行的内容是：[, token未授权, , , , , , , , , , ]
+17:20:05  [INFO ] : 第12行的内容是：[, , 添加空token, addHeader, {"token":"0d862fe621ae4bca86489a554945b202"}, , , , , , , ]
+17:20:05  [INFO ] : 第13行的内容是：[, , 未授权token注销, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, username=Tester&pwd=123456&nickname=测试账号&describe=这是一个测试注册的账号, , jsonValueCheck, $.msg, 非法请求, , ]
+17:20:05  [INFO ] : {"status":405,"msg":"非法请求"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第14行的内容是：[注销逻辑, , ,  , , , , , , , , ]
+17:20:05  [INFO ] : 第15行的内容是：[, token未登录, , , , , , , , , , ]
+17:20:05  [INFO ] : 第16行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:05  [INFO ] : 第17行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:05  [INFO ] : {"status":200,"msg":"success","token":"1d65c34b422445e4a0841fc067d67eba"}
+17:20:05  [INFO ] : 测试成功
+17:20:05  [INFO ] : 第18行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:05  [INFO ] : 解析$.token得到的结果是1d65c34b422445e4a0841fc067d67eba存储为token
+17:20:05  [INFO ] : 第19行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:05  [INFO ] : 第20行的内容是：[, , 注销登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, , , jsonValueCheck, $.status, 200, , ]
+17:20:06  [INFO ] : {"status":200,"msg":"用户已退出登录"}
+17:20:06  [INFO ] : 测试成功
+17:20:06  [INFO ] : 第21行的内容是：[, token已登录, , , , , , , , , , ]
+17:20:06  [INFO ] : 第22行的内容是：[, , 清空token, clearHeader, , , , , , , , ]
+17:20:06  [INFO ] : 第23行的内容是：[, , 请求auth授权, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/auth, , , jsonValueCheck, $.status, 200, , ]
+17:20:06  [INFO ] : {"status":200,"msg":"success","token":"25ae0f73299440ffbce905fc5b8e0ade"}
+17:20:06  [INFO ] : 测试成功
+17:20:06  [INFO ] : 第24行的内容是：[, , 保存头域, saveJsonParam, token, $.token, , , , , , ]
+17:20:06  [INFO ] : 解析$.token得到的结果是25ae0f73299440ffbce905fc5b8e0ade存储为token
+17:20:06  [INFO ] : 第25行的内容是：[, , 更新头域, addHeader, {"token":"{token}"}, , , , , , , ]
+17:20:06  [INFO ] : 第26行的内容是：[, , 有效token, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/login, username=Will&password=123456, , jsonValueCheck, $.status, 200, , ]
+17:20:06  [INFO ] : {"status":200,"msg":"恭喜您，登录成功","userid":"1234570414"}
+17:20:06  [INFO ] : 测试成功
+17:20:06  [INFO ] : 第27行的内容是：[, , 注销登录, postUrl, http://www.testingedu.com.cn:8081/inter/HTTP/logout, , , jsonValueCheck, $.status, 200, , ]
+17:20:06  [INFO ] : {"status":200,"msg":"用户已退出登录"}
+17:20:06  [INFO ] : 测试成功
+17:20:06  [INFO ] : 当前sheet页是正常流程冒烟开始遍历
+17:20:06  [INFO ] : 第0行的内容是：[分组信息, 类别, 用例名, 关键字, 参数1, 参数2, 参数3, 校验, jsonpath, 预期结果, 执行结果, 实际返回]
+17:20:06  [INFO ] : 第1行的内容是：[抽赏, , ,  , , , , , , , , ]
+17:20:06  [INFO ] : 第2行的内容是：[, 抽赏分类, , , , , , , , , , ]
+17:20:06  [INFO ] : 第3行的内容是：[, , 分类名称2位, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, SUCCESS, , ]
+17:20:06  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:06  [INFO ] : 第4行的内容是：[, , 正常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test22","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, SUCCESS, , ]
+17:20:06  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:06  [INFO ] : 第5行的内容是：[, , 异常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, FAIL, , ]
+17:20:06  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:06  [INFO ] : 第6行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第7行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第8行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第9行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第10行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第11行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第12行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第13行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第14行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第15行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第16行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第17行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第18行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第19行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第20行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第21行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第22行的内容是：[, , , , , , , , , , , ]
+17:20:06  [INFO ] : 第23行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 当前sheet页是正常流程冒烟开始遍历
+17:20:57  [INFO ] : 第0行的内容是：[分组信息, 类别, 用例名, 关键字, 参数1, 参数2, 参数3, 校验, jsonpath, 预期结果, 执行结果, 实际返回]
+17:20:57  [INFO ] : 第1行的内容是：[抽赏, , ,  , , , , , , , , ]
+17:20:57  [INFO ] : 第2行的内容是：[, 抽赏分类, , , , , , , , , , ]
+17:20:57  [INFO ] : 第3行的内容是：[, , 分类名称2位, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, SUCCESS, , ]
+17:20:57  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:57  [INFO ] : 第4行的内容是：[, , 正常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test22","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, SUCCESS, , ]
+17:20:57  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:57  [INFO ] : 第5行的内容是：[, , 异常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , equal, $.code, FAIL, , ]
+17:20:57  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:20:57  [INFO ] : 第6行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第7行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第8行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第9行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第10行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第11行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第12行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第13行的内容是：[, , , , , , , , , , , ]
+17:20:57  [INFO ] : 第14行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第15行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第16行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第17行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第18行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第19行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第20行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第21行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第22行的内容是：[, , , , , , , , , , , ]
+17:20:58  [INFO ] : 第23行的内容是：[, , , , , , , , , , , ]

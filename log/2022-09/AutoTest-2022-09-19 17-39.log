@@ -1,0 +1,31 @@
+17:39:32  [INFO ] : 当前sheet页是正常流程冒烟开始遍历
+17:39:32  [INFO ] : 第0行的内容是：[分组信息, 类别, 用例名, 关键字, 参数1, 参数2, 参数3, 校验, jsonpath, 预期结果, 执行结果, 实际返回]
+17:39:32  [INFO ] : 第1行的内容是：[抽赏, , ,  , , , , , , , , ]
+17:39:32  [INFO ] : 第2行的内容是：[, 抽赏分类, , , , , , , , , , ]
+17:39:32  [INFO ] : 第3行的内容是：[, , 分类名称2位, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , jsonValueCheck, $.code, SUCCESS, , ]
+17:39:33  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:39:33  [ERROR] : 测试失败，实际值是FAIL
+17:39:33  [INFO ] : 第4行的内容是：[, , 正常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"name":"test22","image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , jsonValueCheck, $.code, SUCCESS, , ]
+17:39:33  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:39:33  [ERROR] : 测试失败，实际值是FAIL
+17:39:33  [INFO ] : 第5行的内容是：[, , 异常新建, post, http://bigboy-backend-api-sit.bigboy.club/bigboy-backend-api/backendapi/boxActivity/addTopicCategory, {"image":"https://img.bigboy.club/manage-img/1663415614_768_width_618_height_483.gif"}, , jsonValueCheck, $.code, FAIL, , ]
+17:39:33  [INFO ] : {"code":"FAIL","errorMsg":"操作失败","data":null}
+17:39:33  [INFO ] : 测试成功
+17:39:33  [INFO ] : 第6行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第7行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第8行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第9行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第10行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第11行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第12行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第13行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第14行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第15行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第16行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第17行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第18行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第19行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第20行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第21行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第22行的内容是：[, , , , , , , , , , , ]
+17:39:33  [INFO ] : 第23行的内容是：[, , , , , , , , , , , ]
